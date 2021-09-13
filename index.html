@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImageChangeApi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-Container">
+        <h2>Tell Me Your Name I Will Show You Your Personality</h2>
+        <div class="box">
+        <div class="name">
+            <label for="">Enter your Name</label><br>
+            <input type="text" id="nameId" placeholder="Tell me your name">
+        </div>
+        <div class="img-container">
+            <img id="imageChange" src="mainPhoto.jpg" height="200px" width="200px" alt="some error occured">
+        </div>
+        <button>Click Me</button>
+    </div>
+</div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('button').click(function(){
+                const name = $('#nameId').val();
+                
+            $('#imageChange').attr('src', `https://joeschmoe.io/api/v1/${name}`);  
+
+            });
+        });
+    </script>
+
+</body>
+</html>
